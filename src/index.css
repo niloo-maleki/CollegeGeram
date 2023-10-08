@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url("../node_modules/vazirmatn/fonts/webfonts/Vazirmatn-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  html {
+    font-family: Vazirmatn;
+  }
+  body {
+    direction: rtl;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /*  ===== Scrollbar CSS =====  */
+  /* Firefox */
+  * {
+    scrollbar-width: thin !important;
+    /* scrollbar-color: #c0c0c0 #ffffff; */
+    scrollbar-color: inherit;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 6px !important;
+  }
+
+  *::-webkit-scrollbar-track {
+    /* background: #ffffff; */
+    background: inherit;
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    /* background-color: #c0c0c0; */
+    background-color: inherit;
+    border-radius: 10px;
+  }
+}
+
+@layer components {
+  .toast-message {
+    @apply text-base text-black !font-vaziri whitespace-nowrap font-normal !rounded-2xl
+     m-auto text-center flex gap-4 items-center justify-center w-fit !px-14 py-4;
+  }
+}
+
+.Toastify__toast-container {
+  @apply !w-full;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #587052 !important;
+}
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #C38F00 !important;
+  width: 16px !important;
+  height: 0px !important;
+  top: 100% !important;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after{
+  font-size: 16px !important;
+  font-weight: 900 !important;
+}
+
+.swiper-pagination{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
